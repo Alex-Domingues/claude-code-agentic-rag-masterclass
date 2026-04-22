@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(export PATH=\"/c/Program Files/nodejs:$PATH\")",
+      "Bash(curl -s http://127.0.0.1:8001/api/threads -H \"Authorization: Bearer invalid_token\")",
+      "Bash(cmd.exe /c \"taskkill /PID 5612 /F\")",
+      "Bash(powershell -Command \"Get-NetTCPConnection -LocalPort 8000 -State Listen | Select-Object -ExpandProperty OwningProcess\")",
+      "Bash(curl -s -w \"\\\\nHTTP %{http_code}\" http://localhost:8000/api/chat/messages/thread_oUFW0bBIJazw5A2ZMn1RoPjk -H \"Authorization: Bearer test\")",
+      "Bash(claude --version)",
+      "Bash(curl -s http://localhost:5173)",
+      "Bash(curl -v http://localhost:8000/api/chat/messages/8aba7892-2f84-4661-9a41-fe5b5906c40e -H \"Authorization: Bearer test\")",
+      "Bash(curl -s -X OPTIONS http://localhost:8000/api/threads -H 'Origin: http://localhost:5174' -H 'Access-Control-Request-Method: POST' -H 'Access-Control-Request-Headers: authorization,content-type' -v)",
+      "Bash(taskkill /F /IM python.exe)",
+      "Bash(curl -s http://localhost:8000/health)",
+      "Bash(curl -s -X OPTIONS http://localhost:8000/api/threads -H 'Origin: http://localhost:5174' -H 'Access-Control-Request-Method: POST' -H 'Access-Control-Request-Headers: authorization,content-type')",
+      "Bash(find \"c:/Users/achno/OneDrive/Bureau/RAGmasterclass/claude-code-agentic-rag-masterclass/backend\" -name \"*.pyc\" -not -path \"*/venv/*\" -delete)",
+      "Bash(find \"c:/Users/achno/OneDrive/Bureau/RAGmasterclass/claude-code-agentic-rag-masterclass/backend\" -name \"__pycache__\" -not -path \"*/venv/*\" -type d -exec rm -rf {} +)",
+      "Bash(netstat -ano)",
+      "Bash(taskkill /F /IM python.exe /T)",
+      "Bash(taskkill /F /IM uvicorn.exe /T)",
+      "Bash(wmic process:*)",
+      "Bash(curl -s http://localhost:8001/health)",
+      "Bash(curl -s -X OPTIONS http://localhost:8001/api/threads -H 'Origin: http://localhost:5174' -H 'Access-Control-Request-Method: POST' -H 'Access-Control-Request-Headers: authorization,content-type')",
+      "Bash(curl -s -X POST http://localhost:8001/api/threads -H \"Content-Type: application/json\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8001/api/threads)",
+      "Bash(curl -s -I -X OPTIONS http://localhost:8001/api/threads -H 'Origin: http://localhost:5173' -H 'Access-Control-Request-Method: POST' -H 'Access-Control-Request-Headers: Authorization,Content-Type')",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" -X POST http://localhost:8001/api/threads)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" -X POST http://localhost:8001/api/chat/stream)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8001/api/chat/messages/fake-id)",
+      "WebSearch",
+      "Bash(grep -E \"\\\\.py$|\\\\.env\")",
+      "Bash(findstr \":8000 \\\\|:5173 \")",
+      "Bash(findstr \":5173 \")"
+    ]
+  }
+}

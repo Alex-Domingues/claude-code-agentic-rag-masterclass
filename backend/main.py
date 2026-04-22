@@ -1,0 +1,22 @@
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+
+from routers import chat, threads
+
+app = FastAPI(title="RAG Masterclass API")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origin_regex=r"http://localhost:\d+",
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+app.include_router(threads.router, prefix="/api/threads")
+app.include_router(chat.router, prefix="/api/chat")
+
+
+@app.get("/health")
+async def health():
+    return {"status": "ok"}
